@@ -35,6 +35,7 @@ function adicionar (){
         item.text = `Valor ${num.value} adicionado`
         lista.appendChild(item)
         res.innerHTML = ''
+        document.getElementById("res").style.display = "none";
     }
     else{
         window.alert('Valor inválido ou já encontrado na lista!')
@@ -50,6 +51,7 @@ function finalizar(){
         window.alert('Adicione valores antes de finalizar!')
     }
     else {
+        document.getElementById("res").style.display = "inline-block";
         let tot = valores.length //comprimento da array
         let maior = valores[0]
         let menor = valores[0]
