@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="shortcut icon" href="/image/123.png" type="image/x-icon">
     <title>Analisador de números</title>
 </head>
 <body>
@@ -13,19 +13,22 @@
         <h1>Analisador de números</h1>
     </header>
 
-    <section>
-        <p>Número (entre 1 e 100): <input class="lista" type="number" name="fnum" id="fnum"> <input class="finaliza" type="button" value="Adicionar" onclick="adicionar()"></p>
+    <main>
+        <section>
+            <p>Número (entre 1 e 100): <input class="lista" type="number" name="fnum" id="fnum"> <input class="finaliza" type="button" value="Adicionar" onclick="adicionar()"></p>
         
-        <select name="flista" id="flista" size="5">
+            <select name="flista" id="flista" size="5">
+            </select>
+            <br><br>
+            <input class="finaliza" type="button" value="Finalizar" onclick="finalizar()">
+            <div id="res">
+            </div>
+        </section>
+    </main>
 
-        </select>
-        <br><br>
-        <input class="finaliza" type="button" value="Finalizar" onclick="finalizar()">
-
-        <div id="res">
-
-        </div>
-    </section>
+    <footer>
+        <p>&copy; Esthéfani Possamai</p>
+    </footer>
 
 <script src="script.js"></script>
 
