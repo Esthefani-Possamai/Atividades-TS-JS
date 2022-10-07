@@ -1,11 +1,8 @@
-//primeiro eu crio uma função para o evento de clicar do botão "Adicionar"
-
 let num = document.querySelector('input#fnum')
 let lista = document.querySelector ('select#flista')
 let res = document.querySelector ('div#res')
 let valores = []
 
-//verificar se o número está entre 1 e 100, como solicitado
 function isNumero (n){
     if (Number (n) >= 1 && Number(n) <= 100){
         return true
@@ -15,7 +12,6 @@ function isNumero (n){
     }
 }
 
-//verificar se o número já existe na array
 function inLista (n, l) {
     if (l.indexOf(Number(n)) != -1) {
         return true
@@ -26,9 +22,7 @@ function inLista (n, l) {
 }
 
 function adicionar (){
-    //verificar o número e adicioná-lo na lista
 
-    //Se o número realmente for um número, e se esse número não está na lista, eu vou adicioná-lo
     if(isNumero(num.value) && !inLista(num.value, valores)){
         valores.push(Number(num.value))
         let item = document.createElement ('option')
@@ -41,7 +35,6 @@ function adicionar (){
         window.alert('Valor inválido ou já encontrado na lista!')
     }
 
-    //apagar o que estiver escrito e já deixar o cursor piscando para digitar o próximo número
     num.value = ''
     num.focus()
 }
@@ -52,7 +45,7 @@ function finalizar(){
     }
     else {
         document.getElementById("res").style.display = "inline-block";
-        let tot = valores.length //comprimento da array
+        let tot = valores.length 
         let maior = valores[0]
         let menor = valores[0]
         let soma = 0
@@ -60,7 +53,6 @@ function finalizar(){
         
         res.innerHTML = ''
         res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
-        //ou for(let pos in valores), que é o laço de percurso
         for (let i = 0; i<= tot; i++){
             if (valores[i] > maior){
                 maior = valores[i]
